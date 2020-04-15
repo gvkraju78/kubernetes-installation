@@ -1,4 +1,4 @@
-[init] Using Kubernetes version: v1.17.4
+[init] Using Kubernetes version: v1.18.1
 [preflight] Running pre-flight checks
 [preflight] Pulling images required for setting up a Kubernetes cluster
 [preflight] This might take a minute or two, depending on the speed of your internet connection
@@ -32,14 +32,15 @@
 [control-plane] Creating static Pod manifest for "kube-scheduler"
 [etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
 [wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
-[apiclient] All control plane components are healthy after 12.502307 seconds
+[apiclient] All control plane components are healthy after 20.003533 seconds
 [upload-config] Storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
-[kubelet] Creating a ConfigMap "kubelet-config-1.17" in namespace kube-system with the configuration for the kubelets in the cluster
+[kubelet] Creating a ConfigMap "kubelet-config-1.18" in namespace kube-system with the configuration for the kubelets in the cluster
 [upload-certs] Skipping phase. Please see --upload-certs
 [mark-control-plane] Marking the node master1 as control-plane by adding the label "node-role.kubernetes.io/master=''"
 [mark-control-plane] Marking the node master1 as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
-[bootstrap-token] Using token: qesk4z.sif6dif02py12aim
+[bootstrap-token] Using token: socqjf.ud0ocg3szkgcy3m2
 [bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to get nodes
 [bootstrap-token] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
 [bootstrap-token] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
 [bootstrap-token] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
@@ -62,5 +63,5 @@ Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
 
 Then you can join any number of worker nodes by running the following on each as root:
 
-kubeadm join 10.128.0.21:6443 --token qesk4z.sif6dif02py12aim \
-    --discovery-token-ca-cert-hash sha256:a86f6ebe34c120b64dd62e79bb1d2cbf833346d0c637b66dafae53a9bc474f51 
+kubeadm join 10.128.0.21:6443 --token socqjf.ud0ocg3szkgcy3m2 \
+    --discovery-token-ca-cert-hash sha256:faaf4d9607d4ec8f8899d4240410fae40c555d85d11695a44b2fcda0793c3251 
